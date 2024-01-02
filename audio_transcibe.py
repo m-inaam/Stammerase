@@ -1,3 +1,22 @@
+'''
+    This script transcribes audio files in the specified folder and its subfolders.
+
+    The main functionality includes:
+    1. Walking through the directory tree starting from the provided main folder path.
+    2. Identifying .wav files within each subfolder.
+    3. Using the Google Web Speech API to transcribe each audio file.
+    4. Saving the transcriptions in individual text files with the same name as the corresponding audio files.
+
+    Usage:
+    - Ensure the 'speech_recognition' library is installed: pip install SpeechRecognition
+    - Adjust the 'main_folder_path' variable with the path to your main folder containing subfolders with .wav files.
+    - Execute the script, which will process each .wav file, transcribe it, and save the transcription in a text file.
+
+    Note:
+    - The script handles exceptions for cases where the Google Web Speech API fails to transcribe the audio.
+    - Each transcription is saved in a text file with the same name as the original audio file.
+'''
+
 import os
 import speech_recognition as sr
 
